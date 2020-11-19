@@ -2,6 +2,28 @@ body {
   background-color: #f8f8f8;
 }
 
+/* Catégorie Accueil - Carrousel */
+.carousel-caption h2 {
+    color: white;
+}
+
+.opacity {
+    background-color: #f8f8f8;
+}
+
+.opacity img {
+    opacity: 0.8;
+}
+
+.modal-body h3 {
+    color: #2A4C54;
+}
+
+.background-modal {
+    background-color: #F8F8F8;
+}
+
+/* Catégorie Produits */
 h1,
 h2,
 h3 {
