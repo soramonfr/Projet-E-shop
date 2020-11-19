@@ -1,9 +1,29 @@
 body {
-    background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
+
+h1,
+h2,
+h3 {
+  color: #2a4c54;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 8px #2a4c54;
+}
+
+.card-text {
+  color: #bb5554;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.card-link {
+  color: #3a3a3a;
+}
+
 /* Couleurs:
 Blanc sur le menu #FFFFFF
-Sur les écritures menu et titre Vert #2A4C54
+Sur les écritures menu et titre Vert #2A4C54 
 Background page Blanc-Gris #F8F8F8
 Icônes en rouge pastel #BB5554
 Écritures type noire-gris #3a3a3a
