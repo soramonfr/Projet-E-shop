@@ -13,6 +13,8 @@
 
 <body>
     <div class="container-fluid">
+        <div id="scrollTop"></div>
+
         <!-- Catégorie Accueil - Carrousel -->
         <div class="row justify-content-center">
             <h1 class="col-sm text-center mb-4">Bienvenue sur notre boutique en ligne!</h1>
@@ -67,6 +69,7 @@
         </div>
     </div>
     <!-- Fin Catégorie Accueil - Carrousel -->
+
     <!-- Catégorie Produits -->
     <div class="products">
         <div class="row justify-content-center">
@@ -87,9 +90,15 @@
                                 <span class="card-text">15€</span>
                             </div>
                             <div class="col text-right mt-3">
-                                <a href="#" class="card-link">
-                                    <svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-cart-plus-fill"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <a href="" class="card-link" 
+                                    id="article1" 
+                                    data-ref="ref. 123" 
+                                    data-name="Bouquet Amanthus" 
+                                    data-price="15"
+                                    >
+                                    <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
+                                        class="bi bi-cart-plus-fill" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
                                     </svg>
@@ -335,7 +344,28 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h3 class="card-title text-center">Amaranthus</h3>
-                        <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                        <img class="card-img-top" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exo4modal" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                        <div class="modal" id="exo4modal" tabindex="-1" role="dialog" aria-labelledby="exo4ModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exo4ModalLabel">La Manu Le Havre</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body bg-primary text-white text-center">https://lamanu.fr/le-havre
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                            X Fermer
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col text-left mt-3">
                                 <span class="card-text">15€</span>
@@ -357,6 +387,81 @@
     </div>
     </div>
     <!-- Fin de la catégorie Produits -->
+
+    <!-- Fiche description produit -->
+
+
+    <!-- Modale Panier -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal" id="displayCart">
+        Panier
+    </button>
+
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content background-modal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Récapitulatif du panier</h3>
+                    <table class="table table-hover" id="cartTable">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-left">Nom</th>
+                                <th scope="col" class="text-left">Ref</th>
+                                <th scope="col" class="text-left">Prix unitaire</th>
+                                <th scope="col" class="text-center">Quantité</th>
+                                <th scope="col" width="200" class="text-center">Total</th>
+                                <th scope="col" width="200" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <td>
+                                    <h5 class="title text-truncate" id="">Nom article</h5>
+                                    <dl class="param param-inline small">
+                                        <dt>Référence :</dt>
+                                        <dd id="">...</dd>
+                                    </dl>
+                                </td>
+                                <td>
+                                    <div class="price" id="">
+                                        .....
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="form-control" id="">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <div class="total text-center" id="">
+                                        ......
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger" id="">Supprimer cet article</button>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+
+                    <div class="text-right">Sous-total TTC : <span id="">.....</span></div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info">Passer ma commande</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin modale panier -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

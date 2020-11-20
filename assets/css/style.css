@@ -2,25 +2,44 @@ body {
   background-color: #f8f8f8;
 }
 
+/* Scroll top */
+#scrollTop {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-right: 12px solid transparent;
+  border-bottom: 23px solid black;
+  border-left: 13px solid transparent;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  transition: all 1s ease;
+}
+
+#scrollTop:hover {
+  bottom: 3%;
+}
+
 /* Catégorie Accueil - Carrousel */
 .carousel-caption h2 {
-    color: white;
+  color: white;
 }
 
 .opacity {
-    background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .opacity img {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
+/* Modal Panier */
 .modal-body h3 {
-    color: #2A4C54;
+  color: #2a4c54;
 }
 
 .background-modal {
-    background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 /* Catégorie Produits */
