@@ -35,10 +35,6 @@ ul li {
   text-align: center;
 }
 
-/* #container {
-  display: flex;
-} */
-
 footer {
   background: #2a4c54;
   color: white;
@@ -114,19 +110,6 @@ a:hover {
 
 #scrollTop:hover {
   bottom: 3%;
-}
-
-/* Catégorie Accueil - Carrousel
-.carousel-caption h2 {
-  color: white;
-}
-
-.opacity {
-  background-color: #f8f8f8;
-}
-
-.opacity img {
-  opacity: 0.8;
 }
 
 /* Modal Panier */
