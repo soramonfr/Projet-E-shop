@@ -1,5 +1,101 @@
 body {
   background-color: #f8f8f8;
+  height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/*css Cristina menu & footer*/
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+
+nav {
+  position: absolute;
+}
+nav a:hover {
+  background-color: #7eb9be;
+}
+
+.logo a:hover {
+  color: none;
+}
+.nav.navbar-brand {
+  float: none;
+  align-self: left;
+}
+.img-responsive {
+  position: relative;
+  margin: 0 auto;
+}
+ul li {
+  text-align: center;
+}
+
+/* #container {
+  display: flex;
+} */
+
+footer {
+  background: #2a4c54;
+  color: white;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.footerLeft {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footerRight {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footerCenter {
+  margin-top: 2rem;
+}
+
+.footerBottom {
+  text-align: center;
+}
+
+#footerRight #links a:hover {
+  color: white;
+}
+
+a {
+  color: lightblue;
+}
+
+a:hover {
+  color: white;
+}
+
+/* Catégorie Accueil - Carrousel */
+.opacity {
+  background-color: #000000;
+}
+
+.opacity img {
+  opacity: 0.8;
+}
+
+.carousel-caption h2 {
+  color: white;
+}
+
+.modal-body h3 {
+  color: #2a4c54;
+}
+
+.background-modal {
+  background-color: #f8f8f8;
 }
 
 /* Scroll top */
@@ -20,7 +116,7 @@ body {
   bottom: 3%;
 }
 
-/* Catégorie Accueil - Carrousel */
+/* Catégorie Accueil - Carrousel
 .carousel-caption h2 {
   color: white;
 }
@@ -41,6 +137,7 @@ body {
 .background-modal {
   background-color: #f8f8f8;
 }
+
 
 /* Catégorie Produits */
 h1,
