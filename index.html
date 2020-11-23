@@ -31,7 +31,7 @@
                         <a class="nav-link" href="#plantesExt">Plantes d'extérieur</a>
                     </li>
                     <li class="nav-item active" id="semences">
-                        <a class="nav-link" href="#semences">Semences</a>
+                        <a class="nav-link" href="#semences">Bouquets de fleurs séchées</a>
                     </li>
                 </ul>
             </div>
@@ -39,12 +39,48 @@
             <a href="#index" class="navbar-brand mx-auto">
                 <img src="assets/img/SoCrisTo.png" class="img-responsive"></a>
             <a href="#panier">
-                <span type="badge-pill" class="panier" data-toggle="modal" data-target="#panierModal"
-                    id="iconepanierTop">
-                    <i class="fas fa-shopping-cart"></i>
+                <span type="badge-pill" class="panier" data-toggle="modal" data-target="#cartModal" id="displayCart">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
                 </span></a>
 
         </nav>
+
+        <!-- Modale Panier -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content background-modal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="text-center">Récapitulatif du panier</h3>
+                        <table class="table table-hover" id="cartTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-left">Nom du produit</th>
+                                    <th scope="col" class="text-left">Référence article</th>
+                                    <th scope="col" class="text-left">Prix unitaire</th>
+                                    <th scope="col" class="text-center">Quantité</th>
+                                    <th scope="col" width="200" class="text-center">Total</th>
+                                    <th scope="col" width="200" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                        <div class="text-right">Sous-total TTC : <span id="">.....</span></div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info">Passer ma commande</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Scroll to top -->
         <div id="scrollTop"></div>
@@ -117,21 +153,16 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Roger</h3>
+                                <img class="card-img-top" src="assets/img/monstera.png" alt="Plante Monstera en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">15€</span>
+                                        <span class="card-text">15 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="" class="card-link article" data-ref="ref. 123"
-                                            data-name="Bouquet Amanthus" data-price="15">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                            data-name="Roger" data-price="15">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -141,21 +172,17 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Josette</h3>
+                                <img class="card-img-top" src="assets/img/begoniamaculata.jpg"
+                                    alt="Plante Begonia Maculata en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">2€50</span>
+                                        <span class="card-text">12.50 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="#" class="card-link article" data-ref="ref. 456"
-                                            data-name="Bouquet Tulipes" data-price="2.5">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                            data-name="Josette" data-price="12.5">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -165,21 +192,17 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Antoine</h3>
+                                <img class="card-img-top" src="assets/img/aphelandra.jpg"
+                                    alt="Plante Alephandra en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">20€</span>
+                                        <span class="card-text">20 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="#" class="card-link article" data-ref="ref. 789"
-                                            data-name="Bouquet Lotus" data-price="20">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                            data-name="Antoine" data-price="20">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -189,21 +212,17 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Mireille</h3>
+                                <img class="card-img-top" src="assets/img/zamioculcas.jpg"
+                                    alt="Plante Zamioculcas en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">15€</span>
+                                        <span class="card-text">15 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="#" class="card-link article" data-ref="ref. 112"
-                                            data-name="Bouquet Fraises" data-price="15">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                            data-name="Mireille" data-price="15">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -221,21 +240,17 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Solange</h3>
+                                <img class="card-img-top" src="assets/img/herbechat.jpg"
+                                    alt="Plante d'herbe à chat en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">15€</span>
+                                        <span class="card-text">4.99 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="" class="card-link article" data-ref="ref. 123"
-                                            data-name="Bouquet Amanthus" data-price="15">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="" class="card-link article" data-ref="ref. 345"
+                                            data-name="Solange" data-price="4.99">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -245,21 +260,17 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Jean-Claude</h3>
+                                <img class="card-img-top" src="assets/img/pernettyaext.jpg"
+                                    alt="Plante Pernettya en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">2€50</span>
+                                        <span class="card-text">7.50 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="#" class="card-link article" data-ref="ref. 456"
-                                            data-name="Bouquet Tulipes" data-price="2.5">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="#" class="card-link article" data-ref="ref. 678"
+                                            data-name="Jean-Claude" data-price="7.5">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -269,21 +280,17 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Laurette</h3>
+                                <img class="card-img-top" src="assets/img/helleborusext.jpg"
+                                    alt="Plante Helleborus en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">20€</span>
+                                        <span class="card-text">20 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="#" class="card-link article" data-ref="ref. 789"
-                                            data-name="Bouquet Lotus" data-price="20">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="#" class="card-link article" data-ref="ref. 901"
+                                            data-name="Laurette" data-price="20">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -293,21 +300,16 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">René</h3>
+                                <img class="card-img-top" src="assets/img/aloevera.jpg" alt="Plante Aloe Vera en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">15€</span>
+                                        <span class="card-text">11.5 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="#" class="card-link article" data-ref="ref. 112"
-                                            data-name="Bouquet Fraises" data-price="15">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="#" class="card-link article" data-ref="ref. 2234"
+                                            data-name="René" data-price="11.5">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -317,30 +319,25 @@
                 </div>
             </section>
 
-            <!-- Sous-Catégorie Semences -->
+            <!-- Sous-Catégorie Bouquets de fleurs séchées -->
             <section id="semences">
                 <div class="row justify-content-center">
-                    <h2 class="col-sm text-center mb-4">Semences</h2>
+                    <h2 class="col-sm text-center mb-4">Bouquets de fleurs séchées</h2>
                 </div>
                 <div class="row justify-content-center" id="housePlant">
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Lionel</h3>
+                                <img class="card-img-top" src="assets/img/Lionel.png" alt="Bouquet de fleurs séchées">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">15€</span>
+                                        <span class="card-text">5.99 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="" class="card-link article" data-ref="ref. 123"
-                                            data-name="Bouquet Amanthus" data-price="15">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="" class="card-link article" data-ref="ref. 2567"
+                                            data-name="Lionel" data-price="5.99">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -350,21 +347,16 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Pamela</h3>
+                                <img class="card-img-top" src="assets/img/pamela.jpg" alt="Bouquet de fleurs séchées">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">2€50</span>
+                                        <span class="card-text">6.99 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="#" class="card-link article" data-ref="ref. 456"
-                                            data-name="Bouquet Tulipes" data-price="2.5">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="#" class="card-link article" data-ref="ref. 2890"
+                                            data-name="Pamela" data-price="6.99">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -374,21 +366,16 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Louis</h3>
+                                <img class="card-img-top" src="assets/img/Louis.jpg" alt="Bouquet de fleurs séchées">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">20€</span>
+                                        <span class="card-text">10 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="#" class="card-link article" data-ref="ref. 789"
-                                            data-name="Bouquet Lotus" data-price="20">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="#" class="card-link article" data-ref="ref. 3123"
+                                            data-name="Louis" data-price="10">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -398,21 +385,16 @@
                     <div class="col-sm-2">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Amaranthus</h3>
-                                <img class="card-img-top" src="assets/img/bouquet.jpg" alt="Bouquet de fleurs séchées">
+                                <h3 class="card-title text-center">Hélène</h3>
+                                <img class="card-img-top" src="assets/img/hélène.png" alt="Bouquet de fleurs séchées">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">15€</span>
+                                        <span class="card-text">15 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
-                                        <a href="#" class="card-link article" data-ref="ref. 112"
-                                            data-name="Bouquet Fraises" data-price="15">
-                                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16"
-                                                class="bi bi-cart-plus-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
-                                            </svg>
+                                        <a href="#" class="card-link article" data-ref="ref. 3456"
+                                            data-name="Hélène" data-price="15">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -422,50 +404,6 @@
                 </div>
             </section>
 
-        </div>
-
-
-        <!-- Fiche description produit -->
-
-        <!-- Modale Panier -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal" id="displayCart">
-            Voir le panier
-        </button>
-
-
-        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content background-modal">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h3 class="text-center">Récapitulatif du panier</h3>
-                        <table class="table table-hover" id="cartTable">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="text-left">Nom du produit</th>
-                                    <th scope="col" class="text-left">Référence article</th>
-                                    <th scope="col" class="text-left">Prix unitaire</th>
-                                    <th scope="col" class="text-center">Quantité</th>
-                                    <th scope="col" width="200" class="text-center">Total</th>
-                                    <th scope="col" width="200" class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-
-                        <div class="text-right">Sous-total TTC : <span id="">.....</span></div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-info">Passer ma commande</button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Footer -->
@@ -489,8 +427,8 @@
                 <div class="footerCenter col-lg-4 col-md-4 col-sm-4 text-center">
                     <div>
                         <p></p>
-                        <p><a href="#"><span><i class="fa fa-facebook"></i></span></a>
-                            <a href="#"><span><i class="fa fa-instagram"></i></span></a></p>
+                        <p><a href="#"><span><i class="fa fa-facebook fa-2x"></i></span></a>
+                            <a href="#"><span><i class="fa fa-instagram fa-2x"></i></span></a></p>
                     </div>
                 </div>
 
@@ -501,7 +439,7 @@
                         <p class="links">
                             <a href="#plantesInt">Plantes d'intérieur</a> |
                             <a href="#plantesExt">Plantes d'exterieur</a> |
-                            <a href="#semences">Semences</a> |
+                            <a href="#semences">Bouquets de fleurs séchées</a>
                         </p>
                     </div>
                 </div>

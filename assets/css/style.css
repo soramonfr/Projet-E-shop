@@ -16,6 +16,7 @@ body {
 nav {
   position: absolute;
 }
+
 nav a:hover {
   background-color: #7eb9be;
 }
@@ -33,6 +34,10 @@ nav a:hover {
 }
 ul li {
   text-align: center;
+}
+
+.fas {
+  color: #2a4c54;
 }
 
 footer {
@@ -120,7 +125,6 @@ a:hover {
 .background-modal {
   background-color: #f8f8f8;
 }
-
 
 /* Catégorie Produits */
 h1,
