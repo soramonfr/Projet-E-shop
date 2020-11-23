@@ -9,6 +9,11 @@ button.onclick = function (e) {
     });
 }
 
+
+
+
+
+
 // Création tableau d'articles (Panier)
 
 let cart = [];
@@ -44,19 +49,24 @@ let cartTableElt = document.getElementById("cartTable");
 function displayCart() {
     // Suppression des lignes existantes dans le tableau pour éviter que les lignes soient dupliquées lorsque l'on reclique sur le btn "afficher panier"
     cartTableElt.tBodies[0].innerHTML = "";
+    let total = 0;
     // Génération des lignes dans le tableau
     cart.forEach(art => {
         let trElt = document.createElement("tr");
         trElt.className = "cart-line";
         trElt.innerHTML = "<td><h5 class=\"title text-truncate\">" + art.name + "</h5></td>\
         <td>" + art.ref + "</td>\
-        <td class=\"price\">"+ art.price + "</td>\
+        <td class=\"price\">"+ art.price + " €" + "</td>\
         <td><input type=\"number\" value=\""+ art.quantity + "\"></td>\
-        <td class=\"total text-center\">"+ Number.parseFloat(art.price) * Number.parseInt(art.quantity) + "</td>\
-        <td><button type=\"button\" class=\"btn btn-danger deleteArticle\">Supprimer cet article</button></td>";
+        <td class=\"total text-center\">"+ Number.parseFloat(art.price) * Number.parseInt(art.quantity) + " €" + "</td>\
+        <td class=\"text-center\"><button type=\"button\"><i class=\"fas fa-trash-alt deleteArticle\"></i></button></td>";
         cartTableElt.tBodies[0].appendChild(trElt);
+        total += Number.parseFloat(art.price) * Number.parseInt(art.quantity);
     });
-
+    // MAJ du total
+    let finalResult = document.getElementById("result");
+    finalResult.textContent = total +" €";
+    
     let cartLines = document.getElementsByClassName("cart-line");
     for (const cartLine of cartLines) {
         // Ajout de l'action de mise à jour de la quantité d'article
@@ -76,4 +86,5 @@ function displayCart() {
         }
     }
 }
+
 displayCartBtn.addEventListener("click", displayCart);

@@ -14,7 +14,7 @@
 
 <body>
     <div class="container-fluid">
-
+        <div id="background"></div>
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-light sticky-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -56,7 +56,7 @@
                     </div>
                     <div class="modal-body">
                         <h3 class="text-center">Récapitulatif du panier</h3>
-                        <table class="table table-hover" id="cartTable">
+                        <table class="table table-responsive table-hover" id="cartTable">
                             <thead>
                                 <tr>
                                     <th scope="col" class="text-left">Nom du produit</th>
@@ -71,7 +71,7 @@
                             </tbody>
                         </table>
 
-                        <div class="text-right">Sous-total TTC : <span id="">.....</span></div>
+                        <div class="text-right font-weight-bold">Total TTC : <span id="result"></span></div>
 
                     </div>
                     <div class="modal-footer">
@@ -86,7 +86,7 @@
 
         <!-- Catégorie Accueil - Carrousel -->
         <div class="row justify-content-center">
-            <h1 class="col-sm text-center mb-4">Bienvenue sur notre boutique en ligne!</h1>
+            <h1 class="col-sm text-center my-5">Bienvenue sur notre boutique en ligne!</h1>
         </div>
         <div class="row justify-content-center">
             <div class="col-sm-8">
@@ -140,12 +140,12 @@
         <!-- Catégorie Produits -->
         <div class="products">
             <div class="row justify-content-center">
-                <h1 class="col-sm text-center mb-4">Nos produits</h1>
+                <h1 class="col-sm text-center mt-5 mb-4">Nos produits</h1>
             </div>
             <!-- Sous-Catégorie Plantes d'intérieur -->
             <section id="plantesInt">
                 <div class="row justify-content-center">
-                    <h2 class="col-sm text-center mb-4">Plantes d'intérieur</h2>
+                    <h2 class="col-sm text-center my-5">Plantes d'intérieur</h2>
                 </div>
                 <div class="row justify-content-center" id="housePlant">
                     <div class="col-sm-2">
@@ -232,7 +232,7 @@
             <!-- Sous-Catégorie Plantes d'extérieur -->
             <section id="plantesExt">
                 <div class="row justify-content-center">
-                    <h2 class="col-sm text-center mb-4">Plantes d'extérieur</h2>
+                    <h2 class="col-sm text-center my-5">Plantes d'extérieur</h2>
                 </div>
                 <div class="row justify-content-center" id="housePlant">
                     <div class="col-sm-2">
@@ -243,11 +243,11 @@
                                     alt="Plante d'herbe à chat en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">4.99 €</span>
+                                        <span class="card-text">4.50 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="" class="card-link article" data-ref="ref. 345" data-name="Solange"
-                                            data-price="4.99">
+                                            data-price="4.5">
                                             <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
@@ -302,7 +302,7 @@
                                 <img class="card-img-top" src="assets/img/aloevera.jpg" alt="Plante Aloe Vera en pot">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">11.5 €</span>
+                                        <span class="card-text">11.50 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="#" class="card-link article" data-ref="ref. 2234" data-name="René"
@@ -320,7 +320,7 @@
             <!-- Sous-Catégorie Bouquets de fleurs séchées -->
             <section id="semences">
                 <div class="row justify-content-center">
-                    <h2 class="col-sm text-center mb-4">Bouquets de fleurs séchées</h2>
+                    <h2 class="col-sm text-center my-5">Bouquets de fleurs séchées</h2>
                 </div>
                 <div class="row justify-content-center" id="housePlant">
                     <div class="col-sm-2">
@@ -330,11 +330,11 @@
                                 <img class="card-img-top" src="assets/img/Lionel.png" alt="Bouquet de fleurs séchées">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">5.99 €</span>
+                                        <span class="card-text">5.50 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="" class="card-link article" data-ref="ref. 2567" data-name="Lionel"
-                                            data-price="5.99">
+                                            data-price="5.5">
                                             <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
@@ -349,11 +349,11 @@
                                 <img class="card-img-top" src="assets/img/pamela.jpg" alt="Bouquet de fleurs séchées">
                                 <div class="row">
                                     <div class="col text-left mt-3">
-                                        <span class="card-text">6.99 €</span>
+                                        <span class="card-text">6.50 €</span>
                                     </div>
                                     <div class="col text-right mt-3">
                                         <a href="#" class="card-link article" data-ref="ref. 2890" data-name="Pamela"
-                                            data-price="6.99">
+                                            data-price="6.5">
                                             <i class="fas fa-cart-plus fa-lg"></i>
                                         </a>
                                     </div>
@@ -426,7 +426,9 @@
                 <div class="footerLeft col-lg-4 col-md-4 col-sm-4">
                     <div id="footerLeft">
                         <p><i class="fa fa-map-marker"></i>
-                            <span>Adresse:</span> 28 Rue d'Estienne d'Orves, 92270 Bois-Colombes</p>
+                            <span>Adresse: </span>
+                        <p><span>28 Rue d'Estienne d'Orves</span></p>
+                        <p><span>92270 Bois-Colombes</span></p>
                     </div>
                     <div>
                         <p><i class="fa fa-phone"></i>
@@ -437,7 +439,6 @@
                             <a href="#">contact@outhone.fr</a></p>
                     </div>
                 </div>
-
                 <div class="footerCenter col-lg-4 col-md-4 col-sm-4 text-center">
                     <div>
                         <p></p>
@@ -445,23 +446,20 @@
                             <a href="#"><span><i class="fa fa-instagram fa-2x"></i></span></a></p>
                     </div>
                 </div>
-
                 <div class="footerRight col-lg-4 col-md-4 col-sm-4 justify-content-right">
                     <div id=footerRight>
-                        <h2 class="titleFooter" id="titleFooter"><span>Outhone</span></h2>
+                        <h2 class="titleFooter text-white" id="titleFooter"><span>Outhone</span></h2>
                         <h4 class="soustitleFooter"><span>Boutique de plantes</span></h4>
                         <p class="links">
                             <a href="#plantesInt">Plantes d'intérieur</a> |
                             <a href="#plantesExt">Plantes d'exterieur</a> |
-                            <a href="#semences">Bouquets de fleurs séchées</a>
+                            <a href="#bouquetsdefleursseches">Bouquets de fleurs séchées</a>
                         </p>
                     </div>
                 </div>
-
                 <div class="footerBottom col-lg-12 col-md-6 col-sm-8 col-12 text-center">
                     <p class="name">2020 &copy; Tous droits réservés</p>
                 </div>
-
             </div>
         </footer>
     </div>

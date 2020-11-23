@@ -2,6 +2,10 @@ body {
   background-color: #f8f8f8;
   height: 100%;
   font-family: "Noto Sans JP", sans-serif;
+  /* background-image: url("https://media.discordapp.net/attachments/778899937772699688/780449029040898098/pexels-louis-2101187.jpg?width=1000&height=677");
+  background-size: cover;
+  background-attachment: fixed; */
+   
 }
 
 /*Navbar*/
@@ -16,15 +20,14 @@ body {
 
 nav {
   position: absolute;
-  background: #F8F8F8;
- 
+  background: #f8f8f8;
 }
 nav a:hover {
-    background-color: #7eb9be;
+  background-color: #7eb9be;
 }
 
 .navbar-brand {
-transform: translate(-500%);
+  transform: translate(-500%);
 }
 .navbar-right {
   transform: translate(-50%);
@@ -36,25 +39,25 @@ transform: translate(-500%);
   width: auto;
 }
 .iconepanierTop {
-  z-index:1;
+  z-index: 1;
 }
 #histoireFirst {
   margin: 2.4rem;
 }
 ul li {
-    text-align: center;
+  text-align: center;
 }
 .plantInt :target {
-  padding-top: 7em; 
-  margin-top: -7em; 
+  padding-top: 7em;
+  margin-top: -7em;
 }
 .plantExt :target {
-  padding-top: 7em; 
-  margin-top: -7em; 
+  padding-top: 7em;
+  margin-top: -7em;
 }
 .bouquetsdefleurssechees :target {
-padding-top: 7em; 
-margin-top: -7em; 
+  padding-top: 7em;
+  margin-top: -7em;
 }
 
 /* Icônes panier */
