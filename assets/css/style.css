@@ -4,7 +4,8 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-/*css Cristina menu & footer*/
+/*Navbar*/
+
 @media (min-width: 768px) {
   .navbar-nav > li > a {
     padding-top: 26.5px;
@@ -15,31 +16,53 @@ body {
 
 nav {
   position: absolute;
+  background: #F8F8F8;
+ 
 }
-
 nav a:hover {
-  background-color: #7eb9be;
+    background-color: #7eb9be;
 }
 
-.logo a:hover {
-  color: none;
+.navbar-brand {
+transform: translate(-500%);
 }
-.nav.navbar-brand {
-  float: none;
-  align-self: left;
+.navbar-right {
+  transform: translate(-50%);
 }
+
 .img-responsive {
   position: relative;
-  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+.iconepanierTop {
+  z-index:1;
+}
+#histoireFirst {
+  margin: 2.4rem;
 }
 ul li {
-  text-align: center;
+    text-align: center;
+}
+.plantInt :target {
+  padding-top: 7em; 
+  margin-top: -7em; 
+}
+.plantExt :target {
+  padding-top: 7em; 
+  margin-top: -7em; 
+}
+.bouquetsdefleurssechees :target {
+padding-top: 7em; 
+margin-top: -7em; 
 }
 
+/* Icônes panier */
 .fas {
   color: #2a4c54;
 }
 
+/* Footer */
 footer {
   background: #2a4c54;
   color: white;
