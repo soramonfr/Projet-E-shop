@@ -9,8 +9,23 @@ button.onclick = function (e) {
     });
 }
 
+// Ancre
+const links = document.querySelectorAll("a");
+ 
+links.forEach(ancre => {
+  ancre.addEventListener("click", scrollSmooth);
+})
 
-
+function scrollSmooth(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+ 
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
 
 
 

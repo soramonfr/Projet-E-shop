@@ -14,6 +14,7 @@
 
 <body>
     <div class="container-fluid">
+        <section id="index"></section>
         <div id="background"></div>
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-light sticky-top">
@@ -31,18 +32,18 @@
                         <a class="nav-link" href="#plantesExt">Plantes d'extérieur</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#bouquetsdefleursseches">Bouquets de fleurs séchées</a>
+                        <a class="nav-link" href="#bouquets">Bouquets de fleurs séchées</a>
                     </li>
                 </ul>
+                <a href="#index" class="navbar-brand mx-auto">
+                    <img src="assets/img/SoCrisTo.png" class="img-responsive">
+                </a>
             </div>
-
-            <a href="#index" class="navbar-brand mx-auto">
-                <img src="assets/img/SoCrisTo.png" class="img-responsive"></a>
             <a href="#panier">
                 <span type="badge-pill" class="panier" data-toggle="modal" data-target="#cartModal" id="displayCart">
                     <i class="fas fa-shopping-cart fa-lg"></i>
-                </span></a>
-
+                </span>
+            </a>
         </nav>
 
         <!-- Modale Panier -->
@@ -70,9 +71,7 @@
                             <tbody>
                             </tbody>
                         </table>
-
                         <div class="text-right font-weight-bold">Total TTC : <span id="result"></span></div>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-info">Passer ma commande</button>
@@ -86,11 +85,11 @@
 
         <!-- Catégorie Accueil - Carrousel -->
         <div class="row justify-content-center">
-            <h1 class="col-sm text-center my-5">Bienvenue sur notre boutique en ligne!</h1>
+            <h1 class="col-sm text-center mb-4">Bienvenue sur notre boutique en ligne!</h1>
         </div>
         <div class="row justify-content-center">
             <div class="col-sm-8">
-                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" role="listBox">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -99,29 +98,29 @@
                     <div class="carousel-inner text-center">
                         <div class="carousel-item active">
                             <div class="opacity">
-                                <img src="../Projet-E-shop/assets/img/carousel/4.jpg" class="d-block w-100" alt="...">
+                                <img src="assets/img/carousel/4.jpg" class="d-block w-100" alt="...">
                             </div>
-                            <div class="carousel-caption">
-                                <h2>Notre savoir faire</h4>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="opacity">
-                                <img src="../Projet-E-shop/assets/img/carousel/5.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-caption">
-                                <h2>Nos garanties</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <h4>Notre savoir faire</h4>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="opacity">
-                                <img src="../Projet-E-shop/assets/img/carousel/1.jpeg" class="d-block w-100" alt="...">
+                                <img src="assets/img/carousel/2.jpeg" class="d-block w-100" alt="...">
                             </div>
-                            <div class="carousel-caption">
-                                <h2>Nos produits</h4>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <h4>Nos garanties</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="opacity">
+                                <img src="assets/img/carousel/1.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <h4>Nos produits</h4>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl.</p>
                             </div>
                         </div>
                     </div>
@@ -318,7 +317,7 @@
             </section>
 
             <!-- Sous-Catégorie Bouquets de fleurs séchées -->
-            <section id="semences">
+            <section id="bouquets">
                 <div class="row justify-content-center">
                     <h2 class="col-sm text-center my-5">Bouquets de fleurs séchées</h2>
                 </div>
@@ -403,6 +402,7 @@
             </section>
 
         </div>
+
         <!-- Bannière  -->
         <div class="col-lg-10 col-md-8 col-sm-8 col-8 mx-auto mt-4">
             <div class="row justify-content-between text-center">
@@ -417,9 +417,9 @@
                 <div class="iconesLast center"><img src="assets/img/sav.jpg">
                     <p>Meilleur SAV</p></img>
                 </div>
-
             </div>
         </div>
+
         <!-- Footer -->
         <footer class="footer">
             <div class="row">
@@ -453,7 +453,7 @@
                         <p class="links">
                             <a href="#plantesInt">Plantes d'intérieur</a> |
                             <a href="#plantesExt">Plantes d'exterieur</a> |
-                            <a href="#bouquetsdefleursseches">Bouquets de fleurs séchées</a>
+                            <a href="#bouquets">Bouquets de fleurs séchées</a>
                         </p>
                     </div>
                 </div>

@@ -21,7 +21,9 @@ body {
 nav {
   position: absolute;
   background: #f8f8f8;
+  z-index: -1;
 }
+
 nav a:hover {
   background-color: #7eb9be;
 }
@@ -47,15 +49,15 @@ nav a:hover {
 ul li {
   text-align: center;
 }
-.plantInt :target {
+#plantInt :target {
   padding-top: 7em;
   margin-top: -7em;
 }
-.plantExt :target {
+#plantExt :target {
   padding-top: 7em;
   margin-top: -7em;
 }
-.bouquetsdefleurssechees :target {
+#bouquets :target {
   padding-top: 7em;
   margin-top: -7em;
 }
