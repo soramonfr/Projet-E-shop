@@ -108,7 +108,7 @@ let bouquets = document.getElementById("bouquets");
 let plantesInterieur = document.getElementById("plantesInt");
 let plantesExterieur = document.getElementById("plantesExt");
 let allProducts = document.getElementById("all-products");
-let test = document.getElementById("test");
+let prod = document.getElementById("prod");
 
 // H&D La navbar
 let bouquetsNav = document.getElementById("bouquetsNav");
@@ -120,28 +120,28 @@ let allProductsNav = document.getElementById("homeNav");
 // H&D Les actions
 allProductsNav.onclick = function (evt) {
     allProducts.style.display = "block";
-    test.style.display = ("block");
+    prod.style.display = ("block");
     plantesInterieur.style.display = "block";
     plantesExterieur.style.display = "block";
     bouquets.style.display = "block";
 }
 
 bouquetsNav.onclick = function (evt) {
-    test.style.display = ("block");
+    prod.style.display = ("block");
     bouquets.style.display = "block";
     plantesInterieur.style.display = "none";
     plantesExterieur.style.display = "none";
 }
 
 plantesInterieurNav.onclick = function (evt) {
-    test.style.display = ("block");
+    prod.style.display = ("block");
     plantesInterieur.style.display = "block";
     bouquets.style.display = "none";
     plantesExterieur.style.display = "none";
 }
 
 plantesExterieurNav.onclick = function (evt) {
-    test.style.display = ("block");
+    prod.style.display = ("block");
     plantesExterieur.style.display = "block";
     plantesInterieur.style.display = "none";
     bouquets.style.display = "none";
