@@ -1,34 +1,3 @@
-// Scroll top
-let button = document.getElementById('scrollTop')
-
-button.onclick = function (e) {
-    e.preventDefault();;
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-// Ancre
-const links = document.querySelectorAll("a");
- 
-links.forEach(ancre => {
-  ancre.addEventListener("click", scrollSmooth);
-})
-
-function scrollSmooth(e) {
-  e.preventDefault();
-  const href = this.getAttribute("href");
-  const offsetTop = document.querySelector(href).offsetTop;
- 
-  scroll({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-}
-
-
-
 // Création tableau d'articles (Panier)
 
 let cart = [];
@@ -53,7 +22,6 @@ for (const article of articles) {
                 quantity: 1
             });
         }
-
         // On ne fait rien d'autre (prévenir refresh sur la page)
         evt.preventDefault();
     }
@@ -80,8 +48,8 @@ function displayCart() {
     });
     // MAJ du total
     let finalResult = document.getElementById("result");
-    finalResult.textContent = total +" €";
-    
+    finalResult.textContent = total + " €";
+
     let cartLines = document.getElementsByClassName("cart-line");
     for (const cartLine of cartLines) {
         // Ajout de l'action de mise à jour de la quantité d'article
@@ -103,3 +71,78 @@ function displayCart() {
 }
 
 displayCartBtn.addEventListener("click", displayCart);
+
+// Scroll top
+let button = document.getElementById('scrollTop')
+
+button.onclick = function (e) {
+    e.preventDefault();;
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// Ancre
+const links = document.querySelectorAll("a");
+
+links.forEach(ancre => {
+    ancre.addEventListener("click", scrollSmooth);
+})
+
+function scrollSmooth(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    });
+}
+
+// Hide or Display des catégories
+
+//  H&D Les catégories 
+let bouquets = document.getElementById("bouquets");
+let plantesInterieur = document.getElementById("plantesInt");
+let plantesExterieur = document.getElementById("plantesExt");
+let allProducts = document.getElementById("all-products");
+let test = document.getElementById("test");
+
+// H&D La navbar
+let bouquetsNav = document.getElementById("bouquetsNav");
+let plantesInterieurNav = document.getElementById("plantesIntNav");
+let plantesExterieurNav = document.getElementById("plantesExtNav");
+let homeNav = document.getElementById("indexNav");
+let allProductsNav = document.getElementById("homeNav");
+
+// H&D Les actions
+allProductsNav.onclick = function (evt) {
+    allProducts.style.display = "block";
+    test.style.display = ("block");
+    plantesInterieur.style.display = "block";
+    plantesExterieur.style.display = "block";
+    bouquets.style.display = "block";
+}
+
+bouquetsNav.onclick = function (evt) {
+    test.style.display = ("block");
+    bouquets.style.display = "block";
+    plantesInterieur.style.display = "none";
+    plantesExterieur.style.display = "none";
+}
+
+plantesInterieurNav.onclick = function (evt) {
+    test.style.display = ("block");
+    plantesInterieur.style.display = "block";
+    bouquets.style.display = "none";
+    plantesExterieur.style.display = "none";
+}
+
+plantesExterieurNav.onclick = function (evt) {
+    test.style.display = ("block");
+    plantesExterieur.style.display = "block";
+    plantesInterieur.style.display = "none";
+    bouquets.style.display = "none";
+}

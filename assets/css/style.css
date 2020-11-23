@@ -1,11 +1,12 @@
 body {
   background-color: #f8f8f8;
+  color: #2a4c54;
   height: 100%;
   font-family: "Noto Sans JP", sans-serif;
-  /* background-image: url("https://media.discordapp.net/attachments/778899937772699688/780449029040898098/pexels-louis-2101187.jpg?width=1000&height=677");
+  /* background-image: url(""); */
+  background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2401x1600/5feada3dbb796c41fa01df7bd1dbd6f2/photo-1466781783364-36c955e42a7f.jpg");
   background-size: cover;
-  background-attachment: fixed; */
-   
+  background-attachment: fixed;
 }
 
 /*Navbar*/
@@ -19,6 +20,7 @@ body {
 }
 
 nav {
+  color: #2a4c54;
   position: absolute;
   background: #f8f8f8;
   z-index: -1;
@@ -43,12 +45,15 @@ nav a:hover {
 .iconepanierTop {
   z-index: 1;
 }
+
 #histoireFirst {
   margin: 2.4rem;
 }
+
 ul li {
   text-align: center;
 }
+
 #plantInt :target {
   padding-top: 7em;
   margin-top: -7em;
@@ -139,6 +144,7 @@ a:hover {
   bottom: 2%;
   right: 2%;
   transition: all 1s ease;
+  z-index: 1;
 }
 
 #scrollTop:hover {
@@ -159,6 +165,13 @@ h1,
 h2,
 h3 {
   color: #2a4c54;
+}
+
+#plantesInt,
+#plantesExt,
+#bouquets,
+#test {
+  display: none;
 }
 
 .card:hover {
