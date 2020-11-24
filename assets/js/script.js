@@ -42,7 +42,7 @@ function displayCart() {
         <td class=\"price\">"+ art.price + " €" + "</td>\
         <td><input type=\"number\" value=\""+ art.quantity + "\"></td>\
         <td class=\"total text-center\">"+ Number.parseFloat(art.price) * Number.parseInt(art.quantity) + " €" + "</td>\
-        <td class=\"text-center\"><button type=\"button\"><i class=\"fas fa-trash-alt deleteArticle\"></i></button></td>";
+        <td class=\"text-center\"><button type=\"button\" class=\"deleteArticle\"><i class=\"fas fa-trash-alt\"></i></button></td>";
         cartTableElt.tBodies[0].appendChild(trElt);
         total += Number.parseFloat(art.price) * Number.parseInt(art.quantity);
     });
@@ -83,24 +83,6 @@ button.onclick = function (e) {
     });
 }
 
-// Ancre
-const links = document.querySelectorAll("a");
-
-links.forEach(ancre => {
-    ancre.addEventListener("click", scrollSmooth);
-})
-
-function scrollSmooth(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-
-    scroll({
-        top: offsetTop,
-        behavior: "smooth"
-    });
-}
-
 // Hide or Display des catégories
 
 //  H&D Les catégories 
@@ -120,28 +102,28 @@ let allProductsNav = document.getElementById("homeNav");
 // H&D Les actions
 allProductsNav.onclick = function (evt) {
     allProducts.style.display = "block";
-    prod.style.display = ("block");
+    prod.style.display = "block";
     plantesInterieur.style.display = "block";
     plantesExterieur.style.display = "block";
     bouquets.style.display = "block";
 }
 
 bouquetsNav.onclick = function (evt) {
-    prod.style.display = ("block");
+    prod.style.display = "block";
     bouquets.style.display = "block";
     plantesInterieur.style.display = "none";
     plantesExterieur.style.display = "none";
 }
 
 plantesInterieurNav.onclick = function (evt) {
-    prod.style.display = ("block");
+    prod.style.display = "block";
     plantesInterieur.style.display = "block";
     bouquets.style.display = "none";
     plantesExterieur.style.display = "none";
 }
 
 plantesExterieurNav.onclick = function (evt) {
-    prod.style.display = ("block");
+    prod.style.display = "block";
     plantesExterieur.style.display = "block";
     plantesInterieur.style.display = "none";
     bouquets.style.display = "none";

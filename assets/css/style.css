@@ -3,11 +3,10 @@ body {
   color: #2a4c54;
   height: 100%;
   font-family: "Noto Sans JP", sans-serif;
-  /* background-image: url(""); */
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.7) 100%
+      rgba(255, 255, 255, 0.3) 100%
     ),
     url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2401x1600/5feada3dbb796c41fa01df7bd1dbd6f2/photo-1466781783364-36c955e42a7f.jpg");
   background-size: cover;
@@ -23,11 +22,15 @@ body {
   }
 }
 
+.nav-item a {
+  color: #2a4c54 !important;
+}
+
 nav {
-  color: #2a4c54;
   position: absolute;
   background: #f8f8f8;
   z-index: -1;
+  height: 100px;
 }
 
 nav a:hover {
