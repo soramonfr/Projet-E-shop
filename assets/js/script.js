@@ -40,7 +40,7 @@ function displayCart() {
         trElt.innerHTML = "<td><h5 class=\"title text-truncate\">" + art.name + "</h5></td>\
         <td>" + art.ref + "</td>\
         <td class=\"price\">"+ art.price + " €" + "</td>\
-        <td><input type=\"number\" value=\""+ art.quantity + "\"></td>\
+        <td><input type=\"number\" size=\"3\" value=\""+ art.quantity + "\"></td>\
         <td class=\"total text-center\">"+ Number.parseFloat(art.price) * Number.parseInt(art.quantity) + " €" + "</td>\
         <td class=\"text-center\"><button type=\"button\" class=\"deleteArticle\"><i class=\"fas fa-trash-alt\"></i></button></td>";
         cartTableElt.tBodies[0].appendChild(trElt);
@@ -128,21 +128,3 @@ plantesExterieurNav.onclick = function (evt) {
     plantesInterieur.style.display = "none";
     bouquets.style.display = "none";
 }
-
-// Ancre - Footer
-// const links = document.querySelectorAll("a");
- 
-// links.forEach(ancre => {
-//   ancre.addEventListener("click", scrollSmooth);
-// })
-
-// function scrollSmooth(e) {
-//   e.preventDefault();
-//   const href = this.getAttribute("href");
-//   const offsetTop = document.querySelector(href).offsetTop;
- 
-//   scroll({
-//     top: offsetTop,
-//     behavior: "smooth"
-//   });
-// }
