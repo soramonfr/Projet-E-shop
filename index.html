@@ -423,87 +423,85 @@
         </div>
 
         <!-- Bannière  -->
-        <div class="col-lg-10 col-md-8 col-sm-8 col-8 mx-auto mt-4">
-            <div class="row justify-content-between text-center">
-                <div class="iconesLastSecond center"><img src="assets/img/bestLogo.png">
-                    <p>Label Plante bleue</p></img>
+        <div class="row justify-content-between text-center my-5">
+            <div class="col-4"><img src="assets/img/bestLogo.png">
+                <p>Label Plante bleue</p></img>
+            </div>
+            <div class="col-4"><img src="assets/img/sav.png">
+                <p>Elu Meilleur SAV 2020</p></img>
+            </div>
+            <div class="col-4 mt-5">
+                <img src="assets/img/livraisonLogo.png">
+                <p>Livraison gratuite</p></img>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fenêtre modale de description produit -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Description du produit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="iconesLast center"><img src="assets/img/sav.png">
-                    <p>Elu Meilleur SAV 2020</p></img>
+                <div class="modal-body">
+                    Le Chamaedora Elegans est une plante qui demande très peu d'attention. L'arrosage se fera une
+                    fois par
+                    semaine en moyenne. Il préfère une exposition à mi ombre et trouvera très facilement sa place
+                    chez vous.<br>
+                    <br>Son allure originale en fait une plante décorative que vous pourrez
+                    garder des années.<br><br>
+                    Plante vendue seule, cache-pot non compris.
                 </div>
-                <div class="iconesLastFirst center">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row">
+            <div class="footerLeft col-lg-4 col-md-4 col-sm-4">
+                <div id="footerLeft">
+                    <p><i class="fa fa-map-marker"></i>
+                        <span>Adresse: </span>
+                    <p><span>28 Rue d'Estienne d'Orves</span></p>
+                    <p><span>92270 Bois-Colombes</span></p>
+                </div>
+                <div>
+                    <p><i class="fa fa-phone"></i>
+                        (+33) 01 47 81 67 76</p>
+                </div>
+                <div>
+                    <p><i class="fa fa-envelope"></i>
+                        <a href="#">contact@outhone.fr</a></p>
+                </div>
+            </div>
+            <div class="footerCenter col-lg-4 col-md-4 col-sm-4 text-center">
+                <div>
                     <p></p>
-                    <img src="assets/img/livraisonLogo.png">
-                    <p>Livraison gratuite à partir de 50€</p></img>
+                    <p><a href="#"><span><i class="fa fa-facebook fa-2x"></i></span></a>
+                        <a href="#"><span><i class="fa fa-instagram fa-2x"></i></span></a></p>
                 </div>
+            </div>
+            <div class="footerRight col-lg-4 col-md-4 col-sm-4 justify-content-right align-middle">
+                <div id=footerRight>
+                    <h2 class="titleFooter text-white" id="titleFooter"><span>Outhone</span></h2>
+                    <h4 class="soustitleFooter"><span>Boutique de plantes</span></h4>
+                    <p class="links">
+                        <a href="#plantesInt">Plantes d'intérieur</a> |
+                        <a href="#plantesExt">Plantes d'exterieur</a> |
+                        <a href="#bouquets">Bouquets de fleurs séchées</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footerBottom col-lg-12 col-md-6 col-sm-8 col-12 text-center">
+                <p class="name">2020 &copy; Tous droits réservés</p>
             </div>
         </div>
-
-        <!-- Fenêtre modale de description produit -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Description du produit</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Le Chamaedora Elegans est une plante qui demande très peu d'attention. L'arrosage se fera une
-                        fois par
-                        semaine en moyenne. Il préfère une exposition à mi ombre et trouvera très facilement sa place
-                        chez vous.<br>
-                        <br>Son allure originale en fait une plante décorative que vous pourrez
-                        garder des années.<br><br>
-                        Plante vendue seule, cache-pot non compris.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="row">
-                <div class="footerLeft col-lg-4 col-md-4 col-sm-4">
-                    <div id="footerLeft">
-                        <p><i class="fa fa-map-marker"></i>
-                            <span>Adresse: </span>
-                        <p><span>28 Rue d'Estienne d'Orves</span></p>
-                        <p><span>92270 Bois-Colombes</span></p>
-                    </div>
-                    <div>
-                        <p><i class="fa fa-phone"></i>
-                            (+33) 01 47 81 67 76</p>
-                    </div>
-                    <div>
-                        <p><i class="fa fa-envelope"></i>
-                            <a href="#">contact@outhone.fr</a></p>
-                    </div>
-                </div>
-                <div class="footerCenter col-lg-4 col-md-4 col-sm-4 text-center">
-                    <div>
-                        <p></p>
-                        <p><a href="#"><span><i class="fa fa-facebook fa-2x"></i></span></a>
-                            <a href="#"><span><i class="fa fa-instagram fa-2x"></i></span></a></p>
-                    </div>
-                </div>
-                <div class="footerRight col-lg-4 col-md-4 col-sm-4 justify-content-right align-middle">
-                    <div id=footerRight>
-                        <h2 class="titleFooter text-white" id="titleFooter"><span>Outhone</span></h2>
-                        <h4 class="soustitleFooter"><span>Boutique de plantes</span></h4>
-                        <p class="links">
-                            <a href="#plantesInt">Plantes d'intérieur</a> |
-                            <a href="#plantesExt">Plantes d'exterieur</a> |
-                            <a href="#bouquets">Bouquets de fleurs séchées</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="footerBottom col-lg-12 col-md-6 col-sm-8 col-12 text-center">
-                    <p class="name">2020 &copy; Tous droits réservés</p>
-                </div>
-            </div>
-        </footer>
+    </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
