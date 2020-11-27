@@ -34,7 +34,6 @@ nav {
   position: absolute;
   background: #f8f8f8;
   z-index: -1;
-  /* height: 100px; */
 }
 
 nav a:hover {
@@ -179,12 +178,12 @@ h3 {
   /* text-shadow: 2px 2px 4px #f8f8f8; */
 }
 
-#plantesInt,
+/* #plantesInt,
 #plantesExt,
 #bouquets,
 #prod {
   display: none;
-}
+} */
 
 .card:hover {
   box-shadow: 3px 3px 8px #2a4c54;

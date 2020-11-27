@@ -128,3 +128,11 @@ plantesExterieurNav.onclick = function (evt) {
     plantesInterieur.style.display = "none";
     bouquets.style.display = "none";
 }
+
+homeNav.onclick = function (evt) {
+    allProducts.style.display = "block";
+    prod.style.display = "block";
+    plantesInterieur.style.display = "block";
+    plantesExterieur.style.display = "block";
+    bouquets.style.display = "block";
+}

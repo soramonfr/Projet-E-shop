@@ -4,8 +4,8 @@
 // 1. Déclaration d'un tableau, vide
 let cart = [];
 
-// 2. Identification et récupération d'un article' (html)
-let article = document.getElementsByClassName('article1');
+// 2. Identification et récupération d'un article (html)
+let article = document.getElementsById('article1');
 //En html, défini comme ci-dessous, en utilisant data-nom-de-l'attribut:
 {/* <xxxxx data-ref="ref. 123" data-name="Roger" data-price="15"> */}
 
@@ -40,7 +40,7 @@ let index = cart.findIndex((searchArticle) => searchArticle.ref === this.dataset
 //findIndex prend une fonction en paramètre (callback), ici passe un paramètre élement du tableau à la fonction de callback. 
 // La fonction de callback doit renvoyer vrai ou faux si elle trouve l'élement que l'on recherche. Cette f° de recherche est résumée par la f° fléchée ci-dessus.
 // On appelle la méthode findIndex, on lui passe la f° de callback (searchArticle) => searchArticle.ref === this.dataset.ref)
-// Si l'attribut ref de l'élement courant de mon tableau (cart) = a l'attribut data-ref de l'element html cliqué (this.dataset.ref)
+// Si l'attribut ref de l'élement courant de mon tableau (cart) = a l'attribut data-ref de l'element html cliqué (this.dataset.ref) alors renvoit son index sinon -1.
 
 // 2) On définit nos conditions pour savoir si on push ou incrémente
 if (index !== -1) {
@@ -57,9 +57,35 @@ if (index !== -1) {
     // Sinon on push (ajouter l'article dans notre tableau "array").
 
 // Commentaire : choix de findIndex car il y a plusieurs façons de chercher dans son tableau https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+// Faire des tests au niveau des consoles pour voir si ça marche aussi avec un objet. Exemple d'écriture pour vérifier sur les consoles mozilla:
 const array1 = [{id:2},{id:85}];
-
 const found = array1.findIndex(element => element.id > 100);
-
 console.log(found);
-// expected output: 12
+// expected output: index ou -1. sinon renverra "undefined"
+
+// 5. boucle - définir let articles = document.getElementsByClassName('article'); puis partir sur une boucle regroupant tous les articles
+
+// 6. Recup btn html panier + tableau en modale.
+// Pour chaque art génère une ligne qu'on ajoute au tbody de notre tableau
+// et on en profite pour calculer le total du panier
+
+// Pour chaque ligne, on ajoute des classes qui permettent d'identifier les champs: une pour la ligne complète "cart-line"
+// une pour identifier le btn "deletearticle"
+
+// Une fois le tableau complètement généré, on récupère ttes les lignes générées via un .getelementbyclassname(cartline)
+// Pour chacune des lignes, on vient ajouter un listener sur l'action .onchange de l'input qté et de l'action onclick pour les btn
+
+// Chacune de ces méthodes réalise une modification sur le tab représentant notre panier (cart)
+// et refait appel à la f° display cart qui va supprimer et regénérer le tab à partir du tableau cart
+
+// cartline.queryselector est utilisé pour réaliser la recherche uniquement dans la ligne
+
+// 6. incrémentation du total panier:
+let total = 0; 
+// Au départ, quand le panier est vide, le total est de 0. On met ensuite à jour le panier à chaque génération de tableau:
+total += Number.parseFloat(art.price) * Number.parseInt(art.quantity);
+// On récupère l'élement html qui sert à afficher le total qu'on a identifié par l'id result 
+// et on lui assigne la valeur "total" calculée auparavant
+let finalResult = document.getElementById("result");
+finalResult.textContent = total + " €";
+
