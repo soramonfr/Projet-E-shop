@@ -69,8 +69,12 @@ function displayCart() {
             // recherche réf de l'article et renvoie à la position (index) de cet article
             let index = cart.findIndex((searchArticle) => searchArticle.ref === cartLine.children[1].textContent);
             // on définit une nouvelle valeur à notre qté sur l'index modifié au niveau du tableau. valueAsNumber déduit via la console en modifiant le champ input.
-            cart[index].quantity = this.valueAsNumber;
-            console.log(this);
+            if (this.valueAsNumber > 1) {
+                cart[index].quantity = this.valueAsNumber;
+                console.log(this);
+            } else {
+                cart.splice(index, 1);
+            }
             // Regénération du tableau (pour prendre en compte les sous totaux)
             displayCart();
         }
